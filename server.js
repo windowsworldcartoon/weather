@@ -18,7 +18,7 @@ app.use(expressSession({
 
 
 app.get('/', (req, res) => {
-  res.send([{ message: 'Welcome to WeatherWatch API!', details: { version: '1.0.0', description: 'WeatherWatch API is for the Desktop Applications of WeatherWatch' },  paths: [{ path: '/forecast/:city' }, { path: '/forecast/grid/:city' }, { path: '/forecast/grid/:city/hourly' }, { path: '/alerts/:city' }, { path: '/api/user' }]}]);
+  res.send([{ message: 'Welcome to WeatherWatch API!', details: { version: '1.0.0', description: 'WeatherWatch API is for the Desktop Applications of WeatherWatch' },  paths: [{ path: '/forecast/:city' }, { path: '/forecast/grid/:city' }, { path: '/forecast/grid/:city/hourly' }, { path: '/alerts/:city' },]}]);
 });
 
 
