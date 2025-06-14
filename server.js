@@ -86,12 +86,12 @@ app.get('/alerts/:city', (req, res) => {
         })
         .catch(error => {
           console.error(error);
-          res.status(500).send('Error fetching weather data');
+          res.status(500).send({ code: 500, message: 'Error fetching weather data', errorMessege: error.message });
         });
     })
     .catch(error => {
       console.error(error);
-      res.status(500).send('Error fetching location data');
+      res.status(500).send({ code: 500, message: 'Error fetching location data', errorMessege: error.message });
     });
 });
 
@@ -127,12 +127,12 @@ app.get('/forecast/grid/:city', (req, res) => {
         })
         .catch(error => {
           console.error(error);
-          res.status(500).send('Error fetching weather data');
+          res.status(500).send({ code: 500, message: 'Error fetching weather data', errorMessege: error.message });
         });
     })
     .catch(error => {
       console.error(error);
-      res.status(500).send('Error fetching location data');
+      res.status(500).send({ code: 500, message: 'Error fetching location data', errorMessege: error.message });
     });
   
 });
@@ -169,12 +169,12 @@ app.get('/forecast/grid/:city/hourly', (req, res) => {
         })
         .catch(error => {
           console.error(error);
-          res.status(500).send({error: 'Error fetching weather data'});
+          res.status(500).send({error: 'Error fetching weather data', errorMessege: error.message });
         });
     })
     .catch(error => {
       console.error(error);
-      res.status(500).send({error: 'Error fetching location data'});
+      res.status(500).send({error: 'Error fetching location data', errorMessege: error.message });
     });
   
 });
